@@ -1,0 +1,12 @@
+{
+  "name": "motech-ecormmerce-admin-panel-frontend-tailwind",
+  "version": "1.0.0",
+  "description": "An project that builds the admin panel of the MoTech admin  panel using the tailwindcss and some custom css if necessary",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "Kennedy Muendo",
+  "license": "ISC"
+}

@@ -37,12 +37,12 @@
       </div>
     </div>
     <section class="dashboard ml-[15rem]">
-      <header>
-        <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
-        <h2 class="capitalize">dashboard</h2>
-        <div class="header-search">
-          <input type="search" name="search-term" id="search-term">
-          <label for="search-term"><i class="fa-solid fa-search"></i></label>
+      <header class="flex gap-4 px-2 py-2 items-center">
+        <label for="menu-bar" class="cursor-pointer"><i class="fa-solid fa-bars text-2xl font-bold p-2"></i></label>
+        <h2 class="capitalize text-xl font-semibold text-[#042EFF]">dashboard</h2>
+        <div class="header-search w-1/2 flex items-center relative">
+          <input type="search" name="search-term" id="search-term" class="border-2 rounded-md px-4 py-3 w-full outline-none">
+          <label for="search-term" class="absolute right-2 inline-block px-4 py-1 text-white bg-[#042EFF]"><i class="fa-solid fa-search text-xl font-bold"></i></label>
         </div>
         <div class="profile-section">
           <div class="profile-pic">
@@ -50,6 +50,9 @@
           </div>
         </div>
       </header>
+      <main class="bg-[#E4E7F3]">
+        This is the main section of the dashboard admin panel
+      </main>
     </section>
   </body>
 </html>

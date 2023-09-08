@@ -10,19 +10,46 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="side-bar">
+    <input type="checkbox" id="menu-bar" class="hidden">
+    <div class="side-bar fixed left-0 min-h-screen w-[15rem] bg-[#042EFF] py-4 flex flex-col justify-between">
       <div class="sidebar-primary-box">
-        <h2 class="side-bar-title">motech</h2>
-        <ul>
-          <li><a href="index.html">dashboard</a></li>
-          <li><a href="analytics.html">analytics</a></li>
-          <li><a href="products.html">products</a></li>
-          <li><a href="orders.html">orders</a></li>
-          <li><a href="stock.html">stock</a></li>
-          <li><a href="stock.html">stock</a></li>
-          <li><a href="clientinfo.html">clientinfo</a></li>
+        <h2 class="side-bar-title text-white font-bold text-2xl text-center capitalize my-4">moTech</h2>
+        <ul class="my-8 text-white px-4 space-y-4 capitalize">
+          <li><a href="index.html"><i class="fa-solid fa-house px-4 py-2 text-xl"></i><span>dashboard</span></a></li>
+          <li><a href="analytics.html"><i class="fa-solid fa-chart-simple px-4 py-2 text-xl"></i><span>analytics</span></a></li>
+          <li><a href="products.html"><i class="fa-solid fa-box px-4 py-2 text-xl"></i><span>products</span></a></li>
+          <li><a href="orders.html"><i class="fa-solid fa-list px-4 py-2 text-xl"></i><span>orders</span></a></li>
+          <li><a href="stock.html"><i class="fa-solid fa-database px-4 py-2 text-xl"></i><span>stock</span></a></li>
+          <li><a href="clientinfo.html"><i class="fa-solid fa-user px-4 py-2 text-xl"></i><span>client info</span></a></li>
         </ul>
       </div>
+      <div class="side-bar-bottom my-4 text-white px-4 space-y-4 capitalize">
+        <ul>
+          <li><a href="logout.html"><i class="fa-solid fa-right-from-bracket px-4 py-2 text-xl"></i><span>log out</span></a></li>
+        </ul>
+        <div class="switch flex w-full gap-2 items-center h-14">
+          <i class="px-4 py-2 text-xl fa-solid fa-moon cursor-pointer"></i>
+          <p>dark mode</p>
+          <div class="mode-toggle cursor-pointer">
+            <span class="switch relative inline-block w-14 h-6 bg-[#232323] rounded-3xl before:content-[''] before:absolute before:h-4 before:w-4 before:rounded-full before:bg-white before:left-1 before:top-1/2 before:-translate-y-1/2"></span>
+          </div>
+        </div>
+      </div>
     </div>
+    <section class="dashboard ml-[15rem]">
+      <header>
+        <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
+        <h2 class="capitalize">dashboard</h2>
+        <div class="header-search">
+          <input type="search" name="search-term" id="search-term">
+          <label for="search-term"><i class="fa-solid fa-search"></i></label>
+        </div>
+        <div class="profile-section">
+          <div class="profile-pic">
+            <img src="" alt="">
+          </div>
+        </div>
+      </header>
+    </section>
   </body>
 </html>

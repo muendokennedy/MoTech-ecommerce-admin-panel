@@ -63,6 +63,15 @@
           <h2 class="text-[rgb(4,46,255)] font-semibold text-2xl py-4">Recent sales</h2>
           <canvas id="myChart2" class="w-full"></canvas>
         </div>
+        <div class="top-sales-container flex my-8 w-full gap-4">
+          <div class="recent-sales bg-white p-4 rounded-md basis-2/3">
+            <h2 class="text-[#042EFF] font-semibold text-xl">Profits per Month</h2>
+            <canvas id="myChart3" class="w-full"></canvas>
+          </div>
+          <div class="recent-sales bg-white p-4 rounded-md basis-1/3">
+            <h2 class="text-[#042EFF] font-semibold text-2xl">Activity distribution</h2>
+            <canvas id="myChart4" class="w-full"></canvas>
+        </div>
       </main>
     </section>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
@@ -83,7 +92,6 @@
           borderColor: 'rgb(4,46,255)',
           data: dataValues1,
           tension: 0.3,
-          pointRadius: 0
         },
       ]
       };
@@ -95,12 +103,22 @@
           backgroundColor: 'rgb(4,46,255)',
           borderColor: 'rgb(4,46,255)',
           data: dataValues2,
-          tension: 0.3,
-          pointRadius: 0
+          tension: 0.3
         },
       ]
       };
-      // The config block for fed
+      const data3 = {
+        labels: labels2,
+        datasets: [{
+          label: 'profits per month',
+          backgroundColor: 'rgb(4,46,255)',
+          borderColor: 'rgb(4,46,255)',
+          data: dataValues2,
+          tension: 0.3
+        },
+      ]
+      };
+      // The config block for recent signups 
       const config1 = {
         type: 'line',
         data: data1,
@@ -150,6 +168,7 @@
         }
       }
     };
+      // The config block for the sales
       const config2 = {
         type: 'line',
         data: data2,
@@ -199,7 +218,57 @@
         }
       }
     };
-      // The render block for the first chart
+      const config3 = {
+        type: 'bar',
+        data: data3,
+        options: {
+          plugins: {
+            legend: {
+              labels: {
+                font: {
+                  size: 16
+                }
+              },
+              display: true
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Amount of money in dollars',
+                  font: {
+                  size: 16
+                },
+                color: 'rgb(4,46,255)'
+              },
+              ticks: {
+                font: {
+                  size: 16
+                }
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Time in months',
+                font: {
+                  size: 16
+                },
+                color: 'rgb(4,46,255)'
+              },
+              ticks: {
+                font: {
+                  size: 16
+              }
+            }
+          }
+        }
+      }
+    };
+    
+    // The render block for the first chart
       const myChart1 = new Chart(
         document.getElementById('myChart1'),
         config1
@@ -207,6 +276,14 @@
       // The render block for the first chart
       const myChart2 = new Chart(
         document.getElementById('myChart2'),
+        config2
+      );
+      const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+      );
+      const myChart4 = new Chart(
+        document.getElementById('myChart4'),
         config2
       );
     </script>

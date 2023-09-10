@@ -588,6 +588,10 @@ video {
   margin-top: 1rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -908,6 +912,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[rgb\(4\2c 46\2c 255\)\] {
+  --tw-text-opacity: 1;
+  color: rgb(4 46 255 / var(--tw-text-opacity));
 }
 
 .outline-none {

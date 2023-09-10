@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <!-- The custom css link -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- The CDN script for loading the chart graphics -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
   </head>
   <body>
     <input type="checkbox" id="menu-bar" class="hidden">
@@ -53,8 +55,160 @@
         </div>
       </header>
       <main class="bg-[#E4E7F3] pt-20 px-[3%] pb-4">
-        My name is the main content of the web page
+        <div class="recent-sales bg-white p-4 rounded-md basis-2/3">
+          <h2 class="text-[rgb(4,46,255)] font-semibold text-2xl py-4">Recent signups</h2>
+          <canvas id="myChart1" class="w-full"></canvas>
+        </div>
+        <div class="recent-sales bg-white p-4 rounded-md basis-2/3 my-4">
+          <h2 class="text-[rgb(4,46,255)] font-semibold text-2xl py-4">Recent sales</h2>
+          <canvas id="myChart2" class="w-full"></canvas>
+        </div>
       </main>
     </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+
+      // The set up block 
+      const labels1 = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+      const dataValues1 = [0, 10, 5, 2, 20, 22, 25, 35, 32, 40, 42, 45];
+      const labels2 = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+      const dataValues2 = [0, 2, 5, 2, 8, 8, 11, 12, 20, 22, 40, 44, 45];
+
+      // The recent signups
+      const data1 = {
+        labels: labels1,
+        datasets: [{
+          label: 'Recent signups',
+          backgroundColor: 'rgb(4,46,255)',
+          borderColor: 'rgb(4,46,255)',
+          data: dataValues1,
+          tension: 0.3,
+          pointRadius: 0
+        },
+      ]
+      };
+      // The recent sales
+      const data2 = {
+        labels: labels2,
+        datasets: [{
+          label: 'Recent sales',
+          backgroundColor: 'rgb(4,46,255)',
+          borderColor: 'rgb(4,46,255)',
+          data: dataValues2,
+          tension: 0.3,
+          pointRadius: 0
+        },
+      ]
+      };
+      // The config block for fed
+      const config1 = {
+        type: 'line',
+        data: data1,
+        options: {
+          plugins: {
+            legend: {
+              labels: {
+                font: {
+                  size: 20
+                }
+              },
+              display: true
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Number of recent signups',
+                  font: {
+                  size: 20
+                },
+                color: 'rgb(4,46,255)'
+              },
+              ticks: {
+                font: {
+                  size: 16
+                }
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Time in months',
+                font: {
+                  size: 20
+                },
+                color: 'rgb(4,46,255)'
+              },
+              ticks: {
+                font: {
+                  size: 16
+              }
+            }
+          }
+        }
+      }
+    };
+      const config2 = {
+        type: 'line',
+        data: data2,
+        options: {
+          plugins: {
+            legend: {
+              labels: {
+                font: {
+                  size: 20
+                }
+              },
+              display: true
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Number of recent sales',
+                  font: {
+                  size: 20
+                },
+                color: 'rgb(4,46,255)'
+              },
+              ticks: {
+                font: {
+                  size: 16
+                }
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Time in months',
+                font: {
+                  size: 20
+                },
+                color: 'rgb(4,46,255)'
+              },
+              ticks: {
+                font: {
+                  size: 16
+              }
+            }
+          }
+        }
+      }
+    };
+      // The render block for the first chart
+      const myChart1 = new Chart(
+        document.getElementById('myChart1'),
+        config1
+      );
+      // The render block for the first chart
+      const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+      );
+    </script>
   </body>
 </html>

@@ -69,7 +69,7 @@
             <canvas id="myChart3" class="w-full"></canvas>
           </div>
           <div class="recent-sales bg-white p-4 rounded-md basis-1/3">
-            <h2 class="text-[#042EFF] font-semibold text-2xl">Activity distribution</h2>
+            <h2 class="text-[#042EFF] font-semibold text-xl">Activity distribution</h2>
             <canvas id="myChart4" class="w-full"></canvas>
         </div>
       </main>
@@ -95,7 +95,6 @@
         },
       ]
       };
-      // The recent sales
       const data2 = {
         labels: labels2,
         datasets: [{
@@ -114,7 +113,25 @@
           backgroundColor: 'rgb(4,46,255)',
           borderColor: 'rgb(4,46,255)',
           data: dataValues2,
-          tension: 0.3
+          tension: 0.3,
+        },
+      ]
+      };
+      const data4 = {
+        labels: [
+          'New signups',
+          'Orders',
+          'Profits'
+        ],
+        datasets: [{
+          label: 'activity distribution',
+          data: [300, 100, 50],
+          backgroundColor: [
+            'rgb(252,0,0)',
+            'rgb(35,35,35)',
+            'rgb(4,46,255)'
+          ],
+          hoverOffset: 4
         },
       ]
       };
@@ -168,7 +185,6 @@
         }
       }
     };
-      // The config block for the sales
       const config2 = {
         type: 'line',
         data: data2,
@@ -266,25 +282,31 @@
           }
         }
       }
+    }
+      const config4 = {
+        type: 'doughnut',
+        data: data4,
     };
     
-    // The render block for the first chart
+    // The render block for the first line chart
       const myChart1 = new Chart(
         document.getElementById('myChart1'),
         config1
       );
-      // The render block for the first chart
+      // The render block for the second line chart
       const myChart2 = new Chart(
         document.getElementById('myChart2'),
         config2
       );
+      // The bar chart
       const myChart3 = new Chart(
         document.getElementById('myChart3'),
         config3
       );
+      // The doughnut  chart
       const myChart4 = new Chart(
         document.getElementById('myChart4'),
-        config2
+        config4
       );
     </script>
   </body>

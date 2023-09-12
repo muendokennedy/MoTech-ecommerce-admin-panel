@@ -1045,7 +1045,23 @@ video {
   content: var(--tw-content);
 }
 
+.hover\:outline:hover {
+  outline-style: solid;
+}
+
+.hover\:outline-\[\]:hover {
+  outline-width: ;
+}
+
+.hover\:outline-\[\#042EFF\]:hover {
+  outline-color: #042EFF;
+}
+
 .focus\:border-\[\#042EFF\]:focus {
   --tw-border-opacity: 1;
   border-color: rgb(4 46 255 / var(--tw-border-opacity));
+}
+
+.focus\:outline-\[\#042EFF\]:focus {
+  outline-color: #042EFF;
 }

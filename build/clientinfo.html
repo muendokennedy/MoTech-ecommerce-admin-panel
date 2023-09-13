@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoTech ecommmerce admin panel</title>
+    <!-- The  font-awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <!-- The custom css link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- The CDN script for loading the chart graphics -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script> -->
+  </head>
+  <body>
+    <input type="checkbox" id="menu-bar" class="hidden">
+    <div class="side-bar fixed left-0 min-h-screen w-[15rem] bg-[#042EFF] py-4 flex flex-col justify-between">
+      <div class="sidebar-primary-box">
+        <h2 class="side-bar-title text-white font-bold text-2xl text-center capitalize my-4">moTech</h2>
+        <ul class="my-8 text-white px-4 space-y-2 capitalize">
+          <li><a href="index.html"><i class="fa-solid fa-house px-4 py-2 text-xl"></i><span>dashboard</span></a></li>
+          <li><a href="analytics.html"><i class="fa-solid fa-chart-simple px-4 py-2 text-xl"></i><span>analytics</span></a></li>
+          <li><a href="products.html"><i class="fa-solid fa-box px-4 py-2 text-xl"></i><span>products</span></a></li>
+          <li><a href="orders.html"><i class="fa-solid fa-list px-4 py-2 text-xl"></i><span>orders</span></a></li>
+          <li><a href="stock.html"><i class="fa-solid fa-database px-4 py-2 text-xl"></i><span>stock</span></a></li>
+          <li><a href="clientinfo.html"><i class="fa-solid fa-user px-4 py-2 text-xl"></i><span>client info</span></a></li>
+          <li><a href="settings.html"><i class="fa-solid fa-gear px-4 py-2 text-xl"></i><span>settings</span></a></li>
+        </ul>
+      </div>
+      <div class="side-bar-bottom my-4 text-white px-4 space-y-2 capitalize">
+        <ul>
+          <li><a href="logout.html"><i class="fa-solid fa-right-from-bracket px-4 py-2 text-xl"></i><span>log out</span></a></li>
+        </ul>
+        <div class="switch flex w-full gap-2 items-center h-14">
+          <i class="px-4 py-2 text-xl fa-solid fa-moon cursor-pointer"></i>
+          <p>dark mode</p>
+          <div class="mode-toggle cursor-pointer">
+            <span class="switch relative inline-block w-14 h-6 bg-[#232323] rounded-3xl before:content-[''] before:absolute before:h-4 before:w-4 before:rounded-full before:bg-white before:left-1 before:top-1/2 before:-translate-y-1/2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="ml-[15rem] min-h-screen">
+      <header class="w-[calc(100% - 15rem)] flex justify-between px-2 py-2 items-center pr-4 fixed top-0 left-[15rem] right-0 z-20 bg-white">
+        <label for="menu-bar" class="cursor-pointer"><i class="fa-solid fa-bars text-2xl font-bold p-2"></i></label>
+        <h2 class="capitalize text-xl font-semibold text-[#042EFF]">dashboard</h2>
+        <div class="header-search w-3/5 flex items-center relative">
+          <input type="search" name="search-term" id="search-term" placeholder="search here..." class="border-2 rounded-md px-4 py-3 w-full outline-none pr-[70px] focus:border-[#042EFF] transition-all duration-300 ease-in-out">
+          <label for="search-term" class="rounded-r-md absolute right-2 inline-block px-4 py-1 text-white bg-[#042EFF] cursor-pointer"><i class="fa-solid fa-search text-xl font-bold"></i></label>
+        </div>
+        <div class="profile-section border-2 flex items-center rounded-md w-64 justify-between">
+          <div class="profile-pic h-[48px] w-[70px] p-1">
+            <img src="images/man4.jpeg" alt="profile image" class="w-full h-full object-cover rounded-l-md">
+          </div>
+          <span class="pr-2">Kennedy Munyao</span>
+        </div>
+      </header>
+      <main class="bg-[#E4E7F3] pt-20 px-[3%] pb-4">
+        <div class="recent-sales bg-white p-4 rounded-md">
+          <h2 class="text-[rgb(4,46,255)] font-semibold text-xl py-4 capitalize">Products in stock</h2>
+          <table class="w-full border-2 my-4">
+            <thead>
+              <tr>
+                <th class="border-2 py-4">Client Name</th>
+                <th class="border-2 py-4">Email</th>
+                <th class="border-2 py-4">Active Customer</th>
+                <th class="border-2 py-4">Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border-2 py-2 text-center">Kennedy Muendo</td>
+                <td class="border-2 py-2 text-center">kennedymuendo@gmail.com</td>
+                <td class="border-2 py-2 text-center">Yes</td>
+                <td class="border-2 py-2 text-center">0745079253</td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 text-center">Kennedy Muendo</td>
+                <td class="border-2 py-2 text-center">kennedymuendo@gmail.com</td>
+                <td class="border-2 py-2 text-center">Yes</td>
+                <td class="border-2 py-2 text-center">0745079253</td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 text-center">Kennedy Muendo</td>
+                <td class="border-2 py-2 text-center">kennedymuendo@gmail.com</td>
+                <td class="border-2 py-2 text-center">Yes</td>
+                <td class="border-2 py-2 text-center">0745079253</td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 text-center">Kennedy Muendo</td>
+                <td class="border-2 py-2 text-center">kennedymuendo@gmail.com</td>
+                <td class="border-2 py-2 text-center">Yes</td>
+                <td class="border-2 py-2 text-center">0745079253</td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 text-center">Kennedy Muendo</td>
+                <td class="border-2 py-2 text-center">kennedymuendo@gmail.com</td>
+                <td class="border-2 py-2 text-center">Yes</td>
+                <td class="border-2 py-2 text-center">0745079253</td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 text-center">Kennedy Muendo</td>
+                <td class="border-2 py-2 text-center">kennedymuendo@gmail.com</td>
+                <td class="border-2 py-2 text-center">Yes</td>
+                <td class="border-2 py-2 text-center">0745079253</td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 text-center">Kennedy Muendo</td>
+                <td class="border-2 py-2 text-center">kennedymuendo@gmail.com</td>
+                <td class="border-2 py-2 text-center">Yes</td>
+                <td class="border-2 py-2 text-center">0745079253</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="w-4/5 border-2 mt-8">
+            <thead>
+              <tr>
+                <th class="border-2 py-4">Product Description</th>
+                <th class="border-2 py-4">Manage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                <td class="border-2 py-2 px-6 w-1/2">
+                  <div class="flex w-full justify-between">
+                    <button type="button" class="bg-[#FFCF10] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
+                    <button type="button" class="bg-[#FF4004] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-trash pl-2"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                <td class="border-2 py-2 px-6 w-1/2">
+                  <div class="flex w-full justify-between">
+                    <button type="button" class="bg-[#FFCF10] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
+                    <button type="button" class="bg-[#FF4004] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-trash pl-2"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                <td class="border-2 py-2 px-6 w-1/2">
+                  <div class="flex w-full justify-between">
+                    <button type="button" class="bg-[#FFCF10] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
+                    <button type="button" class="bg-[#FF4004] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-trash pl-2"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                <td class="border-2 py-2 px-6 w-1/2">
+                  <div class="flex w-full justify-between">
+                    <button type="button" class="bg-[#FFCF10] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
+                    <button type="button" class="bg-[#FF4004] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-trash pl-2"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                <td class="border-2 py-2 px-6 w-1/2">
+                  <div class="flex w-full justify-between">
+                    <button type="button" class="bg-[#FFCF10] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
+                    <button type="button" class="bg-[#FF4004] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-trash pl-2"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                <td class="border-2 py-2 px-6 w-1/2">
+                  <div class="flex w-full justify-between">
+                    <button type="button" class="bg-[#FFCF10] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
+                    <button type="button" class="bg-[#FF4004] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-trash pl-2"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                <td class="border-2 py-2 px-6 w-1/2">
+                  <div class="flex w-full justify-between">
+                    <button type="button" class="bg-[#FFCF10] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
+                    <button type="button" class="bg-[#FF4004] py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-trash pl-2"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="recent-sales bg-white p-4 rounded-md my-4">
+          <h2 class="text-[rgb(4,46,255)] font-semibold text-xl py-4 capitalize">add new product</h2>
+          <div class="new-product-form">
+            <form action="#">
+              <div class="form-row w-full flex justify-between">
+                <div class="input-box basis-[48%]">
+                  <label for="category" class="block py-3">Select Category:</label>
+                  <select name="category" id="category" class="border-2 outline-none rounded-md px-4 py-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+                    <option value="None">None</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Smartwatch">Smartwatch</option>
+                    <option value="Television">Television</option>
+                  </select>
+                </div>
+                <div class="input-box basis-[48%]">
+                  <label for="productName" class="block py-3">Enter Product name:</label>
+                  <input type="text" name="productName" id="productName" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+                </div>
+              </div>
+              <div class="form-row w-full flex justify-between">
+                <div class="input-box basis-[48%]">
+                  <label for="productImage" class="block py-3">Select product images:</label>
+                  <input type="file" name="productImage" id="productImage" class="px-2 py-1 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+                </div>
+                <div class="input-box basis-[48%]">
+                  <label for="initialPrice" class="block py-3">Enter the initial price:</label>
+                  <input type="number" name="initialPrice" id="initialPrice" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+                </div>
+              </div>
+              <div class="form-row w-full flex justify-between">
+                <div class="input-box basis-[48%]">
+                  <label for="discountPrice" class="block py-3">Enter the discounted price:</label>
+                  <input type="number" name="discountPrice" id="discountPrice" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+                </div>
+                <div class="input-box basis-[48%]">
+                  <label for="brandName" class="block py-3">Enter the brand name:</label>
+                  <input type="text" name="brandName" id="brandName" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-box">
+                  <label for="productDescription" class="block py-3">Type the product description:</label>
+                  <textarea name="productDescription" id="productDescription" cols="30" rows="10" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus></textarea>
+                </div>
+              </div>
+              <button type="submit" class="capitalize px-4 py-2 bg-[#042EFF] rounded-md text-white my-4">add product</button>
+            </form>
+          </div>
+          </table>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

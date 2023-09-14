@@ -254,7 +254,7 @@
         </div>
       </main>
     </section>
-    <div class="edit-product bg-white p-4 rounded-md my-4 fixed z-10 top-10 left-52 shadow-xl w-[80%]">
+    <div class="edit-product bg-white p-4 rounded-md my-4 absolute z-10 top-10 left-52 shadow-xl w-[80%]">
       <div class="close flex justify-end px-3"><i class="fa-solid fa-times text-2xl p-2 cursor-pointer"></i></div>
       <h2 class="text-[rgb(4,46,255)] font-semibold text-xl py-4 capitalize">add new product</h2>
       <div class="new-product-form">
@@ -311,13 +311,15 @@
       mainContent = document.querySelector('.main-content'),
       editButtons = document.querySelectorAll(".edit-button"),
       editForm = document.querySelector(".edit-product"),
-      closeButton = document.querySelector(".close i");
+      closeButton = document.querySelector(".close i"),
+      mainWindow = document.querySelector("main");
 
       editButtons.forEach((button) => {
         button.onclick = () => {
           editForm.classList.toggle("active");
           sidebar.classList.toggle("active");
           mainContent.classList.toggle("active");
+          window.scrollTo(0,0);
         }
       });
 

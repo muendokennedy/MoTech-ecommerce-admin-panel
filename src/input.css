@@ -9,3 +9,19 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.edit-product{
+  transform: scale(0);
+  transition: all .3s ease-in-out;
+}
+.edit-product.active{
+  transform: scale(1);
+}
+.side-bar.active{
+  opacity: 0.4;
+}
+.main-content.active{
+  opacity: 0.4;
+}
+footer.active{
+  opacity: 0.4;
+}

@@ -1,11 +1,6 @@
-editForm = document.querySelector(".edit-product"),
+const editForm = document.querySelector(".edit-product"),
 closeButton = document.querySelector(".close i"),
-mainWindow = document.querySelector("main"),
-menuBar = document.querySelector('.menu-bar'),
-linkText = document.querySelectorAll('.side-bar ul li a span'),
-logoTitle = document.querySelector('.side-bar-title'),
-switchText = document.querySelector('.switch p'),
-switchModeToggle = document.querySelector('.switch .mode-toggle .switch-box');
+editButtons = document.querySelectorAll(".edit-button");
 
 editButtons.forEach((button) => {
   button.onclick = () => {

@@ -1,10 +1,6 @@
 const sidebar = document.querySelector('.side-bar'),
 mainContent = document.querySelector('.main-content'),
 header = document.querySelector('.main-header'),
-editButtons = document.querySelectorAll(".edit-button"),
-editForm = document.querySelector(".edit-product"),
-closeButton = document.querySelector(".close i"),
-mainWindow = document.querySelector("main"),
 menuBar = document.querySelector('.menu-bar'),
 linkText = document.querySelectorAll('.side-bar ul li a span'),
 logoTitle = document.querySelector('.side-bar-title'),
@@ -31,7 +27,7 @@ menuBar.onclick = () => {
     logoTitle.textContent = "MT";
     isSidebarHidden = true;
 
-  } else {
+  } else if(isSidebarHidden === true) {
     sidebar.style.width = '15rem';
     mainContent.style.width = 'calc(100% - 15rem)';
     header.style.width = 'calc(100% - 15rem)';
@@ -47,3 +43,23 @@ menuBar.onclick = () => {
   }
 
 }
+
+let mediumScreen = window.matchMedia("(max-width: 1200px)");
+// let mediumScreenGreater = window.matchMedia("(min-width: 768px)");
+function windowResize(){
+  if(mediumScreen.matches){
+    menuBar.click();
+    isSidebarHidden = true;
+  } else {
+    menuBar.click();
+    isSidebarHidden = false;
+  }
+}
+
+mediumScreen.addEventListener('change', windowResize);
+// if(mediumScreenGreater.matches && isSidebarHidden == true){
+//   menuBar.click();
+//   isSidebarHidden = false;
+// }
+
+console.log(isSidebarHidden);

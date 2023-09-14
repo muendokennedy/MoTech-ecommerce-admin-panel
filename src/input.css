@@ -23,3 +23,6 @@
 .main-content.active{
   opacity: 0.2;
 }
+.dashboard-box-container{
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}

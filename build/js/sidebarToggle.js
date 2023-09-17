@@ -57,9 +57,3 @@ function windowResize(){
 }
 
 mediumScreen.addEventListener('change', windowResize);
-// if(mediumScreenGreater.matches && isSidebarHidden == true){
-//   menuBar.click();
-//   isSidebarHidden = false;
-// }
-
-console.log(isSidebarHidden);

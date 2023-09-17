@@ -574,6 +574,14 @@ video {
   top: 2.5rem;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
+.left-24 {
+  left: 6rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1136,6 +1144,10 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:left-32 {
+    left: 8rem;
+  }
+
   .sm\:ml-auto {
     margin-left: auto;
   }

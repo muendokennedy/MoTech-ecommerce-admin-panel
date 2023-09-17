@@ -12,7 +12,7 @@ const orignalInfoBox3 =  document.querySelector('.original-info3');
 const orignalInfoBox4 =  document.querySelector('.original-info4');
 
 input1.addEventListener('change', function(){
-  input1.click();
+  // input1.click();
   let file = this.files[0];
   let fileReader = new FileReader();
   fileReader.onload = () => {
@@ -26,7 +26,7 @@ input1.addEventListener('change', function(){
   fileReader.readAsDataURL(file);
 });
 input2.addEventListener('change', function(){
-  input2.click();
+  // input2.click();
   let file = this.files[0];
   let fileReader = new FileReader();
   fileReader.onload = () => {
@@ -40,7 +40,7 @@ input2.addEventListener('change', function(){
   fileReader.readAsDataURL(file);
 });
 input3.addEventListener('change', function(){
-  input3.click();
+  // input3.click();
   let file = this.files[0];
   let fileReader = new FileReader();
   fileReader.onload = () => {
@@ -54,7 +54,7 @@ input3.addEventListener('change', function(){
   fileReader.readAsDataURL(file);
 });
 input4.addEventListener('change', function(){
-  input4.click();
+  // input4.click();
   let file = this.files[0];
   let fileReader = new FileReader();
   fileReader.onload = () => {
@@ -75,33 +75,24 @@ window.onclick = (e) => {
   }else if(e.target.parentElement.classList.contains('remove-btn1')){
     e.target.parentElement.parentElement.remove();
     fileBox1.appendChild(orignalInfoBox1);
-  }
-}
-window.onclick = (e) => {
-  if(e.target.classList.contains('remove-btn2')){
+  } else if(e.target.classList.contains('remove-btn2')){
     e.target.parentElement.remove();
-    fileBox1.appendChild(orignalInfoBox1);
+    fileBox2.appendChild(orignalInfoBox2);
   }else if(e.target.parentElement.classList.contains('remove-btn2')){
     e.target.parentElement.parentElement.remove();
-    fileBox1.appendChild(orignalInfoBox1);
-  }
-}
-window.onclick = (e) => {
-  if(e.target.classList.contains('remove-btn3')){
+    fileBox2.appendChild(orignalInfoBox2);
+  } else if(e.target.classList.contains('remove-btn3')){
     e.target.parentElement.remove();
-    fileBox1.appendChild(orignalInfoBox1);
+    fileBox3.appendChild(orignalInfoBox3);
   }else if(e.target.parentElement.classList.contains('remove-btn3')){
     e.target.parentElement.parentElement.remove();
-    fileBox1.appendChild(orignalInfoBox1);
-  }
-}
-window.onclick = (e) => {
-  if(e.target.classList.contains('remove-btn4')){
+    fileBox3.appendChild(orignalInfoBox3);
+  } else if(e.target.classList.contains('remove-btn4')){
     e.target.parentElement.remove();
-    fileBox1.appendChild(orignalInfoBox1);
+    fileBox4.appendChild(orignalInfoBox4);
   }else if(e.target.parentElement.classList.contains('remove-btn4')){
     e.target.parentElement.parentElement.remove();
-    fileBox1.appendChild(orignalInfoBox1);
+    fileBox4.appendChild(orignalInfoBox4);
   }
 }
 

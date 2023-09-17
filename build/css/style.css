@@ -582,6 +582,10 @@ video {
   z-index: 20;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -720,6 +724,14 @@ video {
 
 .w-\[40\] {
   width: 40;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .basis-1\/3 {
@@ -1091,6 +1103,10 @@ video {
 @media (min-width: 640px) {
   .sm\:ml-auto {
     margin-left: auto;
+  }
+
+  .sm\:w-64 {
+    width: 16rem;
   }
 }
 

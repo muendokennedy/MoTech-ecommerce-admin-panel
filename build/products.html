@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- The CDN script for loading the chart graphics -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script> -->
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.2/classic/ckeditor.js"></script>
+
   </head>
   <body>
     <input type="checkbox" id="menu-bar" class="hidden">
@@ -289,8 +292,8 @@
               </div>
               <div class="form-row">
                 <div class="input-box">
-                  <label for="productDescription" class="block py-3">Type the product description:</label>
-                  <textarea name="productDescription" id="productDescription" cols="30" rows="10" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus></textarea>
+                  <label for="product-description" class="block py-3">Type the product description:</label>
+                  <textarea name="productDescription" id="product-description" cols="30" rows="10" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus></textarea>
                 </div>
               </div>
               <button type="submit" class="capitalize px-4 py-2 bg-[#042EFF] rounded-md text-white my-4">add product</button>
@@ -355,5 +358,13 @@
     <script src="js/sidebarToggle.js"></script>
     <script src="js/productEditMoodle.js"></script>
     <script src="js/imageBrowser.js"></script>
+    <script>
+      ClassicEditor
+          .create( document.querySelector( '#product-description' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+    </script>
+  
   </body>
 </html>

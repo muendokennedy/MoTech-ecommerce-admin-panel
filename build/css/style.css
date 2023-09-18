@@ -742,6 +742,10 @@ video {
   width: rem;
 }
 
+.w-\[26rem\] {
+  width: 26rem;
+}
+
 .translate-x-8 {
   --tw-translate-x: 2rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));

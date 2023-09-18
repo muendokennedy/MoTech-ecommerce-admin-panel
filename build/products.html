@@ -137,7 +137,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="border-2 py-2 px-2 text-center">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
+                  <td class="border-2 py-2 px-2">Reiciendis et vel illo quod delectus non sequi est. Ut magni consectetur. Facilis est omnis accusantium neque omnis. Quo qui omnis culpa omnis.</td>
                   <td class="border-2 py-2 px-6 w-1/2">
                     <div class="flex w-full justify-between">
                       <button type="button" class="bg-[#FFCF10] edit-button py-3 px-8 capitalize rounded-md">edit <i class="fa-solid fa-edit pl-2"></i></button>
@@ -326,13 +326,59 @@
           </div>
           <div class="form-row w-full flex flex-col md:flex-row justify-between">
             <div class="input-box md:basis-[48%]">
-              <label for="productImage" class="block py-3">Select product images:</label>
-              <input type="file" name="productImage" id="productImage" class="px-2 py-1 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+              <label for="specs" class="block py-3">Enter product specifications (CSV):</label>
+              <input type="text" name="specs" id="specs" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
             </div>
             <div class="input-box md:basis-[48%]">
               <label for="initialPrice" class="block py-3">Enter the initial price:</label>
               <input type="number" name="initialPrice" id="initialPrice" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
             </div>
+          </div>
+          <div class="form-row w-full flex flex-col md:flex-row gap-2 justify-between my-4">
+            <div class="input-box1 md:basis-[23%]  file-box flex items-center justify-center flex-col  border-dashed border-2 border-[#042EFF]">
+              <div class="original-info1 flex items-center justify-center flex-col">
+                <div class="icon pt-4">
+                  <label for="productImage1" class="fa-solid fa-cloud-upload-alt text-4xl text-[#042EFF]"></label>
+                </div>
+                <div class="initial-info">
+                  <label for="productImage1" class="block py-2">Browse image:</label>
+                </div>
+              </div>
+            </div>
+              <input type="file" name="productImage1" id="productImage1" class="file1" hidden>
+            <div class="input-box2 md:basis-[23%]  file-box flex items-center justify-center flex-col  border-dashed border-2 border-[#042EFF]">
+              <div class="original-info2 flex items-center justify-center flex-col">
+                <div class="icon pt-4">
+                  <label for="productImage2" class="fa-solid fa-cloud-upload-alt text-4xl text-[#042EFF]"></label>
+                </div>
+                <div class="initial-info">
+                  <label for="productImage2" class="block py-2">Browse image:</label>
+                </div>
+              </div>
+            </div>
+              <input type="file" name="productImage2" id="productImage2" class="file2" hidden>
+            <div class="input-box3 md:basis-[23%]  file-box flex items-center justify-center flex-col  border-dashed border-2 border-[#042EFF]">
+              <div class="original-info3 flex items-center justify-center flex-col">
+                <div class="icon pt-4">
+                  <label for="productImage3" class="fa-solid fa-cloud-upload-alt text-4xl text-[#042EFF]"></label>
+                </div>
+                <div class="initial-info">
+                  <label for="productImage3" class="block py-2">Browse image:</label>
+                </div>
+              </div>
+            </div>
+              <input type="file" name="productImage3" id="productImage3" class="file3" hidden>
+            <div class="input-box4 md:basis-[23%]  file-box flex items-center justify-center flex-col  border-dashed border-2 border-[#042EFF]">
+              <div class="original-info4 flex items-center justify-center flex-col">
+                <div class="icon pt-4">
+                  <label for="productImage4" class="fa-solid fa-cloud-upload-alt text-4xl text-[#042EFF]"></label>
+                </div>
+                <div class="initial-info">
+                  <label for="productImage4" class="block py-2">Browse image:</label>
+                </div>
+              </div>
+            </div>
+              <input type="file" name="productImage4" id="productImage4" class="file4" hidden>
           </div>
           <div class="form-row w-full flex flex-col md:flex-row justify-between">
             <div class="input-box md:basis-[48%]">
@@ -346,8 +392,8 @@
           </div>
           <div class="form-row">
             <div class="input-box">
-              <label for="productDescription" class="block py-3">Type the product description:</label>
-              <textarea name="productDescription" id="productDescription" cols="30" rows="10" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus></textarea>
+              <label for="product-description-edit" class="block py-3">Type the product description:</label>
+              <textarea name="productDescription" id="product-description-edit" cols="30" rows="10" class="px-2 py-2 rounded-md outline-none border-2 w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus></textarea>
             </div>
           </div>
           <button type="submit" class="capitalize px-4 py-2 bg-[#042EFF] rounded-md text-white my-4">add product</button>
@@ -361,6 +407,11 @@
     <script>
       ClassicEditor
           .create( document.querySelector( '#product-description' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+      ClassicEditor
+          .create( document.querySelector( '#product-description-edit' ) )
           .catch( error => {
               console.error( error );
           } );

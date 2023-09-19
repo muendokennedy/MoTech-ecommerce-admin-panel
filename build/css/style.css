@@ -606,6 +606,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -1110,7 +1114,7 @@ video {
      object-fit: cover;
 }
 
-.remove-btn1, .remove-btn2, .remove-btn3, .remove-btn4, .remove-btn1-edit, .remove-btn2-edit, .remove-btn3-edit, .remove-btn4-edit{
+.remove-btn1, .remove-btn2, .remove-btn3, .remove-btn4, .remove-btn1-edit, .remove-btn2-edit, .remove-btn3-edit, .remove-btn4-edit, .remove-btn1-admin{
   width: 3.2rem;
   height: 3.2rem;
   background: #fff;
@@ -1126,7 +1130,7 @@ video {
   cursor: pointer;
 }
 
-.remove-btn1 i, .remove-btn2 i, .remove-btn3 i, .remove-btn4 i, .remove-btn1-edit i, .remove-btn2-edit i, .remove-btn3-edit i, .remove-btn4-edit i{
+.remove-btn1 i, .remove-btn2 i, .remove-btn3 i, .remove-btn4 i, .remove-btn1-edit i, .remove-btn2-edit i, .remove-btn3-edit i, .remove-btn4-edit i, .remove-btn1-admin i{
   font-size: 2rem;
 }
 

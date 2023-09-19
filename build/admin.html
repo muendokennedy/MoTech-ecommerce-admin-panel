@@ -19,14 +19,21 @@
               <label for="name" class="capitalize block py-3">Enter name:</label>
               <input type="text" name="name" id="name" class="p-2 rounded-md border-2 outline-none w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
             </div>
-            <div class="input-box">
+            <div class="input-box mb-4">
               <label for="email" class="capitalize block py-3">Enter email:</label>
               <input type="text" name="email" id="email" class="p-2 rounded-md border-2 outline-none w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
             </div>
-            <div class="input-box">
-              <label for="photo" class="capitalize block py-3">Select your photo:</label>
-              <input type="file" name="photo" id="photo" class="p-2 rounded-md border-2 outline-none w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
+            <div class="input-admin md:basis-[23%]  file-box flex items-center justify-center flex-col  border-dashed border-2 border-[#042EFF]">
+              <div class="original-info-admin flex items-center justify-center flex-col">
+                <div class="icon pt-4">
+                  <label for="adminProfile" class="fa-solid fa-cloud-upload-alt text-4xl text-[#042EFF]"></label>
+                </div>
+                <div class="initial-info">
+                  <label for="adminProfile" class="block py-2">Browse image:</label>
+                </div>
+              </div>
             </div>
+              <input type="file" name="adminProfile" id="adminProfile" class="file-admin" hidden>
             <div class="input-box">
               <label for="password" class="capitalize block py-3">Enter password</label>
               <input type="password" name="password" id="password" class="p-2 rounded-md border-2 outline-none w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
@@ -36,10 +43,40 @@
               <input type="password" name="password_confirmation" id="password_confirmation" class="p-2 rounded-md border-2 outline-none w-full focus:border-[#042EFF] transition-all duration-300 ease-in-out" autofocus>
             </div>
             <button type="submit" class="text-white bg-[#042EFF] block w-full px-4 py-3 rounded-md my-6 capitalize hover:bg-[#384857] transition-all duration-300 ease-in-out">signup</button>
-            <p class="capitalize"><span>already have an account? </span> <a href="login.html" class="text-[#042eff] hover:underline transition-all duration-300 ease-in-out">login here</a></p>
+            <p class="capitalize"><span>already have an account? </span> <a href="adminlogin.html" class="text-[#042eff] hover:underline transition-all duration-300 ease-in-out">login here</a></p>
           </form>
         </div>
       </main>
     </section>
+    <script>
+      const inputAdmin = document.querySelector('.file-admin');
+      const fileBoxAdmin =  document.querySelector('.input-admin');
+      const originalinfoAdmin =  document.querySelector('.original-info-admin');
+
+    inputAdmin.addEventListener('change', function(){
+        // input1.click();
+        let file = this.files[0];
+        let fileReader = new FileReader();
+        fileReader.onload = () => {
+          let fileURL = fileReader.result;
+          let imgTag = `<div class="uploaded-image">
+          <img src="${fileURL}" alt="">
+          <button type="button" class="remove-btn1-admin"><i class="fa-solid fa-times"></i></button>
+        </div>`;
+        fileBoxAdmin.innerHTML  = imgTag;
+        }
+        fileReader.readAsDataURL(file);
+      });
+
+      window.onclick = (e) => {
+          if(e.target.classList.contains('remove-btn1-admin')){
+          e.target.parentElement.remove();
+          fileBoxAdmin.appendChild(originalinfoAdmin);
+          }else if(e.target.parentElement.classList.contains('remove-btn1-admin')){
+            e.target.parentElement.parentElement.remove();
+            fileBoxAdmin.appendChild(originalinfoAdmin);
+          }
+      }
+    </script>
   </body>
 </html>
